@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         IHK Prüfungsergebnisse
 // @namespace    codexp
-// @version      0.3
+// @version      0.3.1
 // @description  Überwachung der Prüfungsergebnisse
 // @author       codexp@gmx.net
 // @match        https://ausbildung.ihk.de/pruefungsinfos/ergebnisse10.aspx?knr=*
@@ -12,7 +12,7 @@
 (function ($) {
     'use strict';
 
-    var ergebnisseSchonDa = 1; // Anzahl der Ergebnisse die bereits da sind
+    var ergebnisseSchonDa = 0; // Anzahl der Ergebnisse die bereits da sind
 
     var rows = $('tr', $('.content table')[1]);
     var context = new (window.AudioContext || window.webkitAudioContext)();
