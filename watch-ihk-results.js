@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         IHK Prüfungsergebnisse
 // @namespace    codexp
-// @version      0.2
+// @version      0.3
 // @description  Überwachung der Prüfungsergebnisse
 // @author       codexp@gmx.net
 // @match        https://ausbildung.ihk.de/pruefungsinfos/ergebnisse10.aspx?knr=*
 // @require      http://code.jquery.com/jquery-latest.js
+// @downloadURL  https://raw.githubusercontent.com/ewesseloh/tm-ihk-pruefungsergebnisse-alert/master/watch-ihk-results.js
 // ==/UserScript==
 
 (function ($) {
