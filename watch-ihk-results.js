@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         IHK Prüfungsergebnisse
 // @namespace    codexp
-// @version      0.1
+// @version      0.2
 // @description  Überwachung der Prüfungsergebnisse
 // @author       codexp@gmx.net
 // @match        https://ausbildung.ihk.de/pruefungsinfos/ergebnisse10.aspx?knr=*
@@ -10,6 +10,8 @@
 
 (function ($) {
     'use strict';
+
+    var ergebnisseSchonDa = 1; // Anzahl der Ergebnisse die bereits da sind
 
     var rows = $('tr', $('.content table')[1]);
     var context = new (window.AudioContext || window.webkitAudioContext)();
@@ -20,7 +22,7 @@
         window.location.reload();
     }, refreshTime * 1000);
 
-    if (rows.length > 2) {
+    if (rows.length > (ergebnisseSchonDa + 1)) {
         o = create_oscillator();
         o.start(); // start the oscillator
         setTimeout(function () {
